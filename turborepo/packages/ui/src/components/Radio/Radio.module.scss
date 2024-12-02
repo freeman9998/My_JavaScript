@@ -1,0 +1,40 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.group {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.radio {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  & input {
+    display: flex;
+    appearance: none !important;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border: 0;
+    background: url('@assets/icons/ico-radio-default.svg') no-repeat center center;
+    background-size: 24px 24px;
+    &:checked {
+      background: url('@assets/icons/ico-radio-selected.svg') no-repeat center center;
+      background-size: 24px 24px;
+    }
+  }
+  & span {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+  }
+}

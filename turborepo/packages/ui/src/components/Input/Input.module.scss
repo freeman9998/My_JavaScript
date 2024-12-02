@@ -1,0 +1,133 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.inputSection {
+  position: relative;
+  width: 100%;
+  &.cert {
+    margin-bottom: 30px;
+  }
+  & .label {
+    width: 100%;
+  }
+  & .inner {
+    position: relative;
+    & .inp {
+      width: 100%;
+      height: 42px;
+      border: 0;
+      letter-spacing: -0.6px;
+      padding: 10px 1px 10px 1px;
+      font-size: common_constants.$body;
+      font-weight: common_constants.$bold;
+      line-height: 20px;
+      color: common_constants.$darkest_gray;
+      border-bottom: 1.5px solid common_constants.$gray;
+      outline: none;
+      &.error {
+        border-color: common_constants.$red !important;
+      }
+      &[type='password'] {
+        &:not(:placeholder-shown) {
+          //height: 42px;
+          letter-spacing: 3px;
+          //font: small-caption;
+          //font-size: 3rem;
+          color: common_constants.$darkest_gray;
+        }
+        &::placeholder {
+          font-size: common_constants.$body;
+          letter-spacing: 0;
+        }
+      }
+      &::placeholder {
+        color: common_constants.$medium_gray;
+        font-weight: common_constants.$medium;
+      }
+      &:focus {
+        border-color: common_constants.$blue_02;
+        &::placeholder {
+          color: transparent;
+        }
+        & + .focusLine {
+          background-color: common_constants.$blue_02;
+          width: 100%;
+          &.error {
+            background-color: common_constants.$red;
+          }
+        }
+      }
+    }
+    & > .focusLine {
+      height: 2px;
+      width: 0;
+      transition: all 0.5s;
+      display: flex;
+      bottom: 0;
+      position: absolute;
+      background-color: transparent;
+    }
+    & > .remove {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      border: 0;
+      // background: transparent;
+      background: url('@assets/icons/ico-delete.svg') no-repeat center;
+      position: absolute;
+      right: 0;
+      top: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+      cursor: pointer;
+    }
+    & > .timer {
+      width: 42px;
+      height: 24px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      position: absolute;
+      right: 4px;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: common_constants.$blue_02;
+      font-weight: common_constants.$bold;
+      font-size: common_constants.$notes1;
+    }
+    & > .residentRegistrationNumber {
+      position: absolute;
+      left: 20px;
+      top: 7px;
+      height: 28px;
+      width: calc(100% - 24px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+      & span {
+        display: flex;
+        width: 9px;
+        height: 9px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: #333;
+      }
+    }
+  }
+}
+.innerIcoBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -14px;
+  width: 24px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

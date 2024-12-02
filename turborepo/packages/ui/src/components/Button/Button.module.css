@@ -1,0 +1,77 @@
+.button {
+  font-family: 'Noto Sans';
+  min-width: 10rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  letter-spacing: -0.6px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.button[data-type='primary'] {
+  background-color: #007abc;
+  color: #ffffff;
+}
+.button[data-type='primary']:active {
+  background-color: #0061a0;
+}
+
+.button[data-type='secondary'] {
+  border: 1px solid #007abc;
+  background-color: #ffffff;
+  color: #007abc;
+}
+.button[data-type='secondary']:active {
+  background-color: #0061a0;
+  color: #ffffff;
+}
+.button[data-type='mediumSecondary'] {
+  border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffffff;
+  height: 40px;
+}
+.button[data-type='mediumSecondary']:active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.button[data-type='text'] {
+  padding: 0;
+  min-width: auto;
+  height: auto;
+  width: auto;
+  border: 0;
+  background-color: transparent;
+  color: #007abc;
+  margin: 0;
+  flex: none;
+}
+.button[data-type='text'] span {
+  font-size: 1.4rem !important;
+}
+.button[data-type='text']:active {
+  text-decoration: underline;
+}
+.button[data-size='large'] {
+  height: auto;
+}
+.button[data-size='medium'] {
+  height: auto;
+}
+.button[data-size='small'] {
+  height: auto;
+}
+.button[data-size='mini'] {
+  height: auto;
+}
+.button[disabled] {
+  background-color: #f2f2f2 !important;
+  border-color: #f2f2f2 !important;
+  color: #6e6e6e !important;
+}

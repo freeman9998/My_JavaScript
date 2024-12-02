@@ -1,0 +1,19 @@
+.buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  &.vertical {
+    flex-direction: column;
+    & button {
+      flex: initial;
+    }
+  }
+  & button {
+    flex: 1;
+    @media (min-width: 768px) {
+      flex: initial;
+    }
+  }
+}

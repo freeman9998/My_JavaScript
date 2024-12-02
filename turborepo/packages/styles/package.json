@@ -1,0 +1,8 @@
+{
+    "name": "@repo/styles",
+    "version": "0.0.0",
+    "main": "common_contents.scss",
+    "files": ["*.scss"],
+    "scripts": {"clean":"rimraf node_modules"},
+    "peerDependencies": {"sass":"^1.80.6"}
+}

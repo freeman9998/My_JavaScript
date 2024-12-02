@@ -1,0 +1,18 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  height: 25px !important;
+  padding-right: 24px !important;
+  background: #fff url('@assets/icons/ico-select-down.svg') no-repeat right center;
+  background-size: 24px 24px;
+}

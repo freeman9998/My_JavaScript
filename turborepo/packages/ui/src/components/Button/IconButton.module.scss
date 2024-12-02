@@ -1,0 +1,29 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.iconButton {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius:8px;
+  border: 1px solid common_constants.$blue_02;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: common_constants.$white;
+  cursor: pointer;
+
+  &:active {
+    border-color: common_constants.$mlblue2;
+    background-color: common_constants.$mlblue2;
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(207deg) brightness(103%) contrast(101%);
+    }
+  }
+  &[disabled]{
+    border-color: common_constants.$medium_gray;
+    background-color: common_constants.$lightgray;
+    img {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(0%) saturate(58%) hue-rotate(350deg) brightness(100%) contrast(92%);
+    }
+  }
+}

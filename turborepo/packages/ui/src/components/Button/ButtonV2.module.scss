@@ -1,0 +1,151 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.button {
+  min-width: 10rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  letter-spacing: -0.6px;
+  font-size: common_constants.$body;
+  font-weight: common_constants.$bold;
+  gap: 6px;
+  @media (min-width: 768px) {
+    font-size: common_constants.$notes1;
+  }
+  &[data-type='primary'] {
+    background-color: common_constants.$mlblue2;
+    color: common_constants.$white;
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(1%)
+        hue-rotate(83deg) brightness(101%) contrast(101%);
+    }
+    &:active {
+      background-color: common_constants.$mldarkblue3;
+    }
+    &[data-selected='true'] {
+      background-color: common_constants.$mldarkblue3;
+    }
+  }
+  &[data-type='secondary'] {
+    border: 1px solid transparent;
+    background-color: common_constants.$white;
+    color: common_constants.$mlblue2;
+    img {
+      filter: brightness(0) saturate(100%) invert(29%) sepia(97%) saturate(1356%)
+        hue-rotate(177deg) brightness(95%) contrast(101%);
+    }
+    &[data-outline='true'] {
+      border: 1px solid common_constants.$mlblue2;
+      &[disabled] {
+        border: 1px solid common_constants.$mediumgray !important;
+      }
+    }
+    &:active {
+      background-color: #e7f7ff;
+      color: common_constants.$mlbaseblue1;
+    }
+    &[data-selected='true'] {
+      background-color: #e7f7ff;
+      color: common_constants.$mlbaseblue1;
+    }
+    &[disabled] {
+      border: 1px solid transparent !important;
+      background-color: common_constants.$white !important;
+    }
+  }
+  &[data-type='mediumSecondary'] {
+    border: 1px solid common_constants.$white;
+    background-color: rgba(255, 255, 255, 0);
+    color: common_constants.$white;
+    height: 40px;
+    &:active {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: common_constants.$white;
+    }
+    &[data-selected='true'] {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: common_constants.$white;
+    }
+  }
+  //&[data-size='large'] {
+  //  height: 50px;
+  //}
+  //&[data-size='medium'] {
+  //  height: 50px;
+  //  font-size: common_constants.$notes1;
+  //}
+  &[data-size='small'] {
+    height: 40px;
+    font-size: common_constants.$body;
+  }
+  //&[data-size='mini'] {
+  //  height: 36px;
+  //  font-size: common_constants.$notes1;
+  //  font-weight: common_constants.$normal;
+  //}
+  &[data-type='text'] {
+    padding: 0;
+    min-width: auto;
+    height: auto;
+    width: auto;
+    border: 0;
+    background-color: transparent;
+    color: common_constants.$mlblue2;
+    margin: 0;
+    flex: none;
+    & span {
+      font-size: common_constants.$notes1 !important;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+    &[data-selected='true'] {
+      text-decoration: underline;
+    }
+    &[data-size='large'] {
+      height: auto;
+    }
+    &[data-size='medium'] {
+      height: auto;
+    }
+    &[data-size='small'] {
+      height: auto;
+    }
+    &[data-size='mini'] {
+      height: auto;
+    }
+  }
+  &[disabled] {
+    background-color: common_constants.$mediumgray !important;
+    border-color: common_constants.$mediumgray !important;
+    color: common_constants.$white !important;
+    &[data-type='primary'] {
+      color: common_constants.$white !important;
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(1%)
+          hue-rotate(83deg) brightness(101%) contrast(101%);
+      }
+    }
+    &[data-type='secondary'] {
+      color: common_constants.$mediumgray !important;
+      img {
+        filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(154%)
+          hue-rotate(72deg) brightness(96%) contrast(93%);
+      }
+    }
+    &[data-type='mediumSecondary'] {
+      background-color: rgba(255, 255, 25, 0.2) !important;
+      border-color: common_constants.$white !important;
+      color: common_constants.$white !important;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    flex: 1;
+  }
+}

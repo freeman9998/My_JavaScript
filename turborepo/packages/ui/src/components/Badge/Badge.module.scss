@@ -1,0 +1,50 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.health_basic {
+  background-color: common_constants.$green;
+  border: 1px solid common_constants.$green;
+}
+.health_happypack {
+  border: 1px solid common_constants.$black;
+  background-color: transparent;
+}
+.health_standard {
+  background-color: common_constants.$new_green;
+  border: 1px solid common_constants.$new_green;
+  & span {
+    white-space: nowrap;
+  }
+}
+.health_family {
+  background-color: common_constants.$blue_02;
+  border: 1px solid common_constants.$blue_02;
+}
+.health_premium {
+  background-color: common_constants.$dark_blue_01;
+  border: 1px solid common_constants.$dark_blue_01;
+  & span {
+    white-space: nowrap;
+  }
+}
+.future_welcome {
+  background-color: common_constants.$mlbaseteal;
+  border: 1px solid common_constants.$mlbaseteal;
+  & span {
+    white-space: nowrap;
+  }
+}
+.future_basic {
+  background-color: common_constants.$mlblue2;
+  border: 1px solid common_constants.$mlblue2;
+}
+.future_premium {
+  background-color: common_constants.$mldarkblue3;
+  border: 1px solid common_constants.$mldarkblue3;
+  & span {
+    white-space: nowrap;
+  }
+}
+.isNotSignedUp {
+  background-color: common_constants.$darkmediumgray;
+  border: 1px solid common_constants.$darkmediumgray;
+}

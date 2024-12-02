@@ -1,0 +1,82 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.tabs_wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  padding: 0 16px;
+  box-sizing: border-box;
+  min-width: 68px;
+  white-space: nowrap;
+  &.tagType {
+    flex-direction: column;
+    height: 76px;
+    gap: 8px;
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: transparent;
+  }
+}
+
+.isActive {
+  font-weight: common_constants.$bold;
+  &::before {
+    background-color: common_constants.$mlblue2;
+  }
+}
+
+.tabPanel {
+  padding: 0;
+}
+
+.scroll {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 20px;
+  border-bottom: 1px solid common_constants.$lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &.left {
+    overflow-x: auto;
+    .tabs {
+      width: auto;
+      .tab {
+        width: auto;
+        flex: initial;
+      }
+    }
+  }
+}

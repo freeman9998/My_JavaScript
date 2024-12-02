@@ -1,0 +1,18 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.helperText {
+  width: 100%;
+  margin-top: 16px;
+  &.success {
+    color: common_constants.$blue_01;
+  }
+  &.info {
+    color: common_constants.$red;
+  }
+  &.warning {
+    color: common_constants.$red;
+  }
+  &.error {
+    color: common_constants.$red;
+  }
+}

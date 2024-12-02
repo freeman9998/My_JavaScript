@@ -1,0 +1,85 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.select {
+  position: relative;
+  width: 100%;
+  & .label {
+    width: 100%;
+    //padding-bottom: 10px;
+    font-size: common_constants.$notes2;
+    color: common_constants.$dark_gray;
+    min-height: 22px;
+    letter-spacing: -0.6px;
+  }
+  & .inner {
+    position: relative;
+    & .inp {
+      width: 100%;
+      height: 42px;
+      border: 0;
+      letter-spacing: -0.6px;
+      padding: 10px 1px 10px 1px;
+      font-size: common_constants.$body;
+      font-weight: common_constants.$medium;
+      line-height: 20px;
+      color: common_constants.$darkest_gray;
+      border-bottom: 2px solid common_constants.$gray;
+      outline: none;
+      background: #fff url('@assets/icons/ico-select-down.svg') no-repeat right
+        center;
+      background-size: 24px 24px;
+      &::placeholder {
+        color: common_constants.$medium_gray;
+        font-weight: common_constants.$medium;
+      }
+      &.error {
+        border-color: common_constants.$red !important;
+        & + .focusLine {
+          background-color: common_constants.$red !important;
+          width: 100%;
+        }
+      }
+      &:focus {
+        border-color: common_constants.$blue_02 !important;
+        & + .focusLine {
+          background-color: common_constants.$blue_02;
+          width: 100%;
+        }
+      }
+    }
+    & > .focusLine {
+      height: 2px;
+      width: 0;
+      transition: all 0.5s;
+      display: flex;
+      bottom: 0;
+      position: absolute;
+      background-color: transparent;
+    }
+  }
+}
+
+.optionList {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  & li {
+    width: 100%;
+    height: 64px;
+    overflow: hidden;
+    letter-spacing: -0.6px;
+    line-height: common_constants.$body;
+    font-size: common_constants.$h4;
+    font-weight: common_constants.$medium;
+    color: common_constants.$darkest_gray;
+    border-bottom: 1px solid common_constants.$light_gray;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &.active {
+      color: common_constants.$blue_02;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18">
+    <defs>
+        <style>.a{fill:#333;}</style>
+    </defs>
+    <g transform="translate(-3 -3)">
+        <path class="a" d="M3,9V19a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V9Zm7,8H8V15h2Zm0-3H8V12h2Zm3,3H11V15h2Zm0-3H11V12h2Zm3,3H14V15h2Zm0-3H14V12h2Z"/>
+        <path class="a" d="M19,3H5A2,2,0,0,0,3,5V8H21V5A2,2,0,0,0,19,3ZM7,7A1,1,0,1,1,8,6,1,1,0,0,1,7,7ZM17,7a1,1,0,1,1,1-1A1,1,0,0,1,17,7Z"/>
+    </g>
+</svg>

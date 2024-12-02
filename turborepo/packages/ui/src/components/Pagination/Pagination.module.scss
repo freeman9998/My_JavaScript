@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+  padding: 8px 0;
+}
+.navigatorBtn {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  margin: 0 4px;
+  background: transparent !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+.navigatorBtn img {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(2475%)
+    hue-rotate(183deg) brightness(93%) contrast(101%) !important;
+}
+.navigatorBtn[disabled] {
+  background: transparent !important;
+}
+.navigatorBtn[disabled] img {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(2%) saturate(288%)
+    hue-rotate(165deg) brightness(96%) contrast(92%) !important;
+}

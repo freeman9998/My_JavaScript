@@ -1,8 +1,18 @@
 {
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+
+    "module": "ESNext", // or "ES6"
+    "target": "ESNext", // or "ES6"
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+
+    "baseUrl": "src",
+    "paths": {"@assets/*":["assets/*"]},
   },
-  "include": ["src"],
+  "include": ["src","declaration.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

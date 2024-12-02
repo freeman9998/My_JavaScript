@@ -1,0 +1,12 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.section {
+  width: 100%;
+  height: auto;
+  :global(.swiper) {
+    padding: 0 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    width: calc(100% + 32px);
+  }
+}

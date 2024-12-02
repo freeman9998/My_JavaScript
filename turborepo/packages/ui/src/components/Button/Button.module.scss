@@ -1,0 +1,203 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.button {
+  min-width: 10rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  letter-spacing: -0.6px;
+  font-size: common_constants.$body;
+  font-weight: common_constants.$bold;
+  @media (min-width: 768px) {
+    font-size: common_constants.$notes1;
+  }
+  &[data-type='primary'] {
+    background-color: common_constants.$blue_02;
+    color: common_constants.$white;
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(1%)
+      hue-rotate(83deg) brightness(101%) contrast(101%);
+    }
+    &:active {
+      background-color: common_constants.$dark_blue_01;
+    }
+    &[data-selected='true'] {
+      background-color: common_constants.$dark_blue_01;
+      color: common_constants.$white;
+    }
+    &[data-reversed='true'] {
+      background-color: common_constants.$white;
+      border: 1px solid common_constants.$white;
+      color: common_constants.$blue_02;
+      &:active {
+        background-color: common_constants.$gray;
+        color: common_constants.$blue_02;
+      }
+    }
+  }
+  &[data-type='secondary'] {
+    border: 1px solid common_constants.$white;
+    background-color: common_constants.$white;
+    color: common_constants.$blue_02;
+    img {
+      filter: brightness(0) saturate(100%) invert(29%) sepia(97%) saturate(1356%)
+      hue-rotate(177deg) brightness(95%) contrast(101%);
+    }
+    &:active {
+      border-color: common_constants.$tag_bg_blue;
+      background-color: common_constants.$tag_bg_blue;
+      color: common_constants.$blue_02;
+    }
+    &[data-selected='true'] {
+      border-color: common_constants.$tag_bg_blue;
+      background-color: common_constants.$tag_bg_blue;
+      color: common_constants.$blue_02;
+    }
+    &[disabled] {
+      border-color: common_constants.$white;
+      background-color: common_constants.$white;
+      color: common_constants.$medium_gray;
+      img {
+        filter: brightness(0) saturate(100%) invert(74%) sepia(0%) saturate(347%)
+        hue-rotate(31deg) brightness(90%) contrast(95%);
+      }
+    }
+    &[data-reversed='true'] {
+      background-color: common_constants.$darkest_gray;
+      border: 1px solid common_constants.$darkest_gray;
+      color: common_constants.$white;
+      &:active {
+        background-color: common_constants.$light_gray;
+        border: 1px solid common_constants.$white;
+        color: common_constants.$white;
+      }
+    }
+    &[data-outline='true'] {
+      border: 1px solid common_constants.$blue_02;
+      background-color: common_constants.$white;
+      color: common_constants.$blue_02;
+      &:active {
+        background-color: common_constants.$dark_blue_01;
+        color: common_constants.$white;
+        img{
+          filter: brightness(0) saturate(100%) invert(100%) sepia(15%) saturate(1%) hue-rotate(83deg) brightness(101%) contrast(101%);
+        }
+      }
+      &[data-selected='true'] {
+        background-color: common_constants.$dark_blue_01;
+        color: common_constants.$white;
+      }
+      &[disabled] {
+        border-color: common_constants.$dark_gray;
+        background-color: common_constants.$lightgray;
+        color: common_constants.$dark_gray;
+        img {
+          filter: brightness(0) saturate(100%) invert(43%) sepia(1%) saturate(5%)
+          hue-rotate(78deg) brightness(99%) contrast(94%);
+        }
+      }
+      &[data-size='small'] {
+        height: 40px;
+        font-size: common_constants.$body;
+        &[disabled] {
+          border-color: common_constants.$gray;
+          background-color: common_constants.$gray;
+          color: common_constants.$dark_gray;
+        }
+      }
+    }
+  }
+  &[data-type='mediumSecondary'] {
+    border: 1px solid common_constants.$white;
+    background-color: rgba(255, 255, 255, 0);
+    color: common_constants.$white;
+    height: 40px;
+    &:active {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: common_constants.$white;
+    }
+    &[data-selected='true'] {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: common_constants.$white;
+    }
+    &[data-reversed='true'] {
+      border: 1px solid common_constants.$white;
+      background-color: rgba(255, 255, 255, 0);
+      color: common_constants.$white;
+      &:active {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: common_constants.$white;
+      }
+    }
+    &[disabled] {
+      border-color: common_constants.$mediumgray;
+      background-color: rgba(255, 255, 255, 0);
+      color: common_constants.$lightgray;
+    }
+  }
+  //&[data-size='large'] {
+  //  height: 50px;
+  //}
+  //&[data-size='medium'] {
+  //  height: 50px;
+  //  font-size: common_constants.$notes1;
+  //}
+
+  //&[data-size='mini'] {
+  //  height: 36px;
+  //  font-size: common_constants.$notes1;
+  //  font-weight: common_constants.$normal;
+  //}
+  &[data-type='text'] {
+    padding: 0;
+    min-width: auto;
+    height: auto;
+    width: auto;
+    border: 0;
+    background-color: transparent;
+    color: common_constants.$blue_02;
+    margin: 0;
+    flex: none;
+    & span {
+      font-size: common_constants.$notes1 !important;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+    &[data-size='large'] {
+      height: auto;
+    }
+    &[data-size='medium'] {
+      height: auto;
+    }
+    &[data-size='small'] {
+      height: auto;
+    }
+    &[data-size='mini'] {
+      height: auto;
+    }
+  }
+  &[disabled] {
+    background-color: common_constants.$gray;
+    border-color: common_constants.$gray;
+    color: common_constants.$blue_02;
+    img {
+      filter: brightness(0) saturate(100%) invert(43%) sepia(1%) saturate(5%)
+      hue-rotate(78deg) brightness(99%) contrast(94%);
+    }
+    &[data-type='primary'] {
+      background-color: common_constants.$medium_gray;
+      border-color: common_constants.$medium_gray;
+      color: common_constants.$dark_gray;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    flex: 1;
+  }
+}

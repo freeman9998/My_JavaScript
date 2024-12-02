@@ -1,0 +1,15 @@
+@use '~@repo/styles/common_constants' as common_constants;
+
+.parts {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: common_constants.$white;
+  transform: translateY(-1px);
+}
+.parts.selected {
+  background-color: common_constants.$mlblue2;
+}
