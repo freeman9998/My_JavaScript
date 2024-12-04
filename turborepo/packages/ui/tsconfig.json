@@ -1,18 +1,19 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "skipLibCheck": true,
-
-    "module": "ESNext", // or "ES6"
-    "target": "ESNext", // or "ES6"
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "ESNext",
     "moduleResolution": "Node",
+    "lib": ["ES2022", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": true, // Required for decorators like @property
+    "strict": true, // Optional but recommended
     "esModuleInterop": true,
-
-    "baseUrl": "src",
-    "paths": {"@assets/*":["assets/*"]},
+    "skipLibCheck": true,
+    "outDir": "./dist"
   },
-  "include": ["src","declaration.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
